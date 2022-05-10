@@ -28,7 +28,7 @@ const navItems = [
     <nav role="navigation">
         <ul class="flex flex-wrap align-center gap-1">
             <li v-for="link in navItems" :key="link.href" class="p-2 mr-2 rounded bg-tranparent hover:bg-blue-500 dark:hover:bg-red-500 hover:text-white">
-                <nuxt-link :to="link.href" class="active:underline  font-bold tracking-wide whitespace-nowrap cursor-pointer">
+                <nuxt-link :to="link.href" class="active:underline font-bold tracking-wide whitespace-nowrap cursor-pointer">
                     {{ link.text }}
                 </nuxt-link>
             </li>

@@ -5,8 +5,7 @@ import "@fontsource/inter/variable.css"
 
 <template>
 <navigation-app-header />
-<main class="container mx-auto px-1 h-screen">
+<main class="container mx-auto p-4 h-screen" id="main">
+    <NuxtPage />
 </main>
 </template>
-<style>
-</style>

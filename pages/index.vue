@@ -1,7 +1,7 @@
 <template>
     <section class="h-screen">
-        <article class="flex flex-col justify-center h-full">
-            <h1 class="font-display font-black text-5xl border-b-blue-500 dark:border-b-red-500 border-b-4 mb-4">
+        <article class="flex flex-col justify-center h-3/4">
+            <h1 class="font-display font-black lg:text-8xl border-b-blue-500 dark:border-b-red-500 border-b-4 mb-4">
                 MSU Denver's First Hackathon
             </h1>
             <p class="text-2xl font-sans">

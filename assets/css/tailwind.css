@@ -21,4 +21,9 @@
     h3 {
         @apply text-4xl;
     }
+
+    p {
+        @apply text-2xl;
+        @apply font-sans;
+    }
 }

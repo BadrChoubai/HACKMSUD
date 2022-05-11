@@ -24,7 +24,7 @@ const navItems = [
 </script>
 
 <template>
-    <footer class="app-footer bg-zinc-200 dark:bg-slate-600 w-screen" role="banner">
+    <footer class="app-footer bg-zinc-200 dark:bg-slate-600 w-screen absolute bottom-auto" role="banner">
         <div class="container mx-auto p-4">
             <div class="flex flex-center flex-col justify-between">
                 <span class="text-2xl font-black">

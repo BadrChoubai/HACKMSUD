@@ -1,7 +1,7 @@
 <template>
-    <section class="h-full mt-4 mb-4">
-        <article class="flex flex-col justify-center">
-            <h1 class="font-display font-black lg:text-8xl border-b-blue-500 dark:border-b-red-500 border-b-4 mb-4">
+    <section class="h-full">
+        <article class="flex flex-col">
+            <h1 class="font-display font-black lg:text-8xl border-b-blue-600 dark:border-b-red-500 border-b-4 mb-3">
                 MSU Denver's First Hackathon
             </h1>
             <p class="mt-3 mb-3">
@@ -10,12 +10,12 @@
             <p class="mt-3 mb-3">
                 We are going to be planning MSU Denver's very first Hackathon event and will need interested students to join us in doing so, information will be posted somewhere at some time. Stay up to date on the CS Student Discord and through your student emails!
             </p>
-            <div id="BtnContainer" class="flex flex-row justify-start flex-wrap gap-4">
-                <button class="mt-4 bg-blue-500 dark:bg-red-500 p-4 rounded font-bold">
-                    <a class="text-white uppercase tracking-wider whitespace-nowrap w-full" href="#Learn">Learn More</a>
+            <div id="BtnContainer" class="mt-3 flex flex-row justify-start flex-wrap gap-4">
+                <button class="bg-blue-600/80 dark:bg-red-500/80 p-4 rounded">
+                    <a class="text-white tracking-widest whitespace-nowrap font-display font-black drop-shadow-md" href="#Learn" aria-label="Learn More">LEARN MORE</a>
                 </button>
-                <button class="mt-4 bg-blue-500 p-4 rounded font-bold">
-                    <a class="text-white uppercase tracking-wider whitespace-nowrap w-full" href="#Discord">Join the Discord</a>
+                <button class="bg-blue-600/80 dark:bg-red-500/80 p-4 rounded">
+                    <a class="text-white tracking-widest whitespace-nowrap font-display text-clip font-black drop-shadow-md" href="#Discord" aria-label="Join us on Discord">JOIN US ON DISCORD</a>
                 </button>
             </div>
         </article>

@@ -4,9 +4,8 @@ import "@fontsource/inter/variable.css"
 </script>
 
 <template>
-<navigation-app-header />
-<main class="container mx-auto p-4 h-full" id="main">
-    <NuxtPage />
+<navigation-app-header id="AppHeader" role="banner" class="static pb-6" />
+<main class="container mx-auto px-4 h-full mt-4 mb-4" id="main">
+    <NuxtPage class="pb-16"/>
 </main>
-<navigation-app-footer />
 </template>

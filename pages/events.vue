@@ -1,5 +1,5 @@
 <template>
-<section class="h-screen">
+<section>
     <div class="container mx-auto">
         <h1>Events</h1>
     </div>

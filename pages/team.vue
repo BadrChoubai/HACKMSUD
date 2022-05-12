@@ -1,7 +1,7 @@
 <template>
-<section>
-    <div class="container mx-auto">
-        <h1>Meet the Team</h1>
-    </div>
-</section>
+    <section>
+        <div class="container mx-auto">
+            <h1>Meet the Team</h1>
+        </div>
+    </section>
 </template>

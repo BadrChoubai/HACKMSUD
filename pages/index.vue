@@ -12,10 +12,10 @@
             </p>
             <div id="BtnContainer" class="mt-3 flex flex-row justify-start flex-wrap gap-4">
                 <button class="bg-blue-600/80 dark:bg-red-500/80 p-4 rounded">
-                    <a class="text-white tracking-widest whitespace-nowrap font-display font-black drop-shadow-md" href="#Learn" aria-label="Learn More">LEARN MORE</a>
+                    <nuxt-link class="text-white tracking-widest whitespace-nowrap font-display font-black drop-shadow-md" to="/hackathon" aria-label="Learn More">LEARN MORE</nuxt-link>
                 </button>
                 <button class="bg-blue-600/80 dark:bg-red-500/80 p-4 rounded">
-                    <a class="text-white tracking-widest whitespace-nowrap font-display text-clip font-black drop-shadow-md" href="#Discord" aria-label="Join us on Discord">JOIN US ON DISCORD</a>
+                    <a class="text-white tracking-widest whitespace-nowrap font-display text-clip font-black drop-shadow-md" href="https://discord.gg/PpGv3naY" aria-label="Join us on Discord">JOIN US ON DISCORD</a>
                 </button>
             </div>
         </article>

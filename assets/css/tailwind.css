@@ -13,6 +13,7 @@
 
     h1 {
         @apply text-5xl;
+        @apply lg:text-6xl;
         @apply font-display;
         @apply font-black;
     }

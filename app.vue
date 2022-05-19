@@ -1,6 +1,7 @@
 <script setup>
 import "@fontsource/inter"
 import "@fontsource/inter/variable.css"
+import "@fontsource/material-icons";
 </script>
 
 <template>

@@ -1,6 +1,6 @@
-# Nuxt 3 Minimal Starter
+# Hackathon Website
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+Metropolitan State University of Denver and its' ACM Student chapter are planning its first ever Hackathon. This repository hosts the main website for it which is used to bring attention to the main event and serve as an outlet for pushing out information about the organization to students. Built for students by students, we plan to start opening up applications for volunteers who would like to contribute. We will be lookiung for help to manage technology, marketing, financing, and logistics.
 
 ## Setup
 
@@ -24,19 +24,3 @@ Start the development server on http://localhost:3000
 ```bash
 npm run dev
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment) for more information.

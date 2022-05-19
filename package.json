@@ -11,6 +11,7 @@
     "nuxt": "3.0.0-rc.3"
   },
   "dependencies": {
-    "@fontsource/inter": "^4.5.10"
+    "@fontsource/inter": "^4.5.10",
+    "@fontsource/material-icons": "^4.5.4"
   }
 }

@@ -24,7 +24,6 @@
     }
 
     p {
-        @apply text-2xl;
         @apply font-sans;
     }
 }

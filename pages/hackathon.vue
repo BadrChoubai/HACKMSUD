@@ -3,7 +3,7 @@
         <section>
             <article>
                 <h1 class="mb-2 border-b-4 border-b-blue-500 dark:border-b-red-500">Planning a Hackathon</h1>
-                <p>A lot goes in to planning a Hackathon event. This page contains information detailing what you as a
+                <p class="text-2xl">A lot goes in to planning a Hackathon event. This page contains information detailing what you as a
                     student at MSU Denver could do to help. We are going to be building out a team of volunteers to help
                     us
                     make it happen.</p>

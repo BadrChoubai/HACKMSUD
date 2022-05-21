@@ -12,5 +12,12 @@ export default defineNuxtConfig({
   },
   typescript: {
     shim: false
-  }
+  },
+  runtimeConfig: {
+    secretKey: '', // variable that can only be accessed on the server side
+    public: {
+      NOTION_TOKEN: process.env.NOTION_TOKEN,
+      EVENTS_DATABASE_ID: process.env.EVENTS_DATABASE_ID
+    }
+  },
 })

@@ -1,64 +1,53 @@
 <script setup lang="ts">
-interface Event {
-    title: string;
-    description: string;
-    date?: Date ;
-    url: string;
-    tags: string[];
-}
-
-const events: Event[] = [
-    {
-        title: "Das42 Presentation",
-        description: "Das42 is a startup company in Denver",
-        date: new Date("2022-04-28"),
-        url: "https://www.msudenver.edu/career-link",
-        tags: ["on-campus", "ACM"]
-    },
-        {
-        title: "HACKMSUD",
-        description: "Planning is currently in progress for MSU Denver's first ever Hackathon.",
-        url: "https://discord.gg/PpGv3naY",
-        tags: ["on-campus", "ACM"]
-    },
-]
+const { data } = await useFetch('/api/events');
 </script>
 
 <template>
-    <div class="flex flex-col gap-8 lg:w-5/6">
+    <div class="flex flex-col gap-y-8 w-full">
         <section>
             <article>
                 <h1 class="mb-2 border-b-4 border-b-blue-500 dark:border-b-red-500">Events</h1>
-                <p class="text-2xl">
+                <p class="text-2xl mt-3 mb-3">
                     The ACM Student Association plans to hold events for the Fall Semester, and also wants to start
                     attending tech events in the broader Denver Metro Tech community.
                     Below are all the events that we plan on hosting ourselves or attending as a group.
                 </p>
             </article>
         </section>
-        <section>
+        <section class="w-full">
             <header>
                 <h2 class="font-bold">Events Calendar</h2>
             </header>
-            <div class="md:mt-4 flex flex-row flex-wrap items-stretch gap-4">
-                <article class="flex flex-col justify-around items-stretch p-2 shadow-sm md:w-5/12 w-full rounded-md dark:bg-slate-700 bg-white/50" v-for="event in events">
+            <div class="mt-3 mb-3 flex flex-row flex-wrap justify-start gap-4">
+                <article
+                    class="flex flex-col justify-around w-full lg:w-[600px] items-start p-6 shadow-sm border-2 border-black dark:bg-slate-700"
+                    v-for="event in data.events">
                     <header class="block">
-                        <nuxt-link :to="event.url" external :aria-label="`View event website for ${event.title}`">
-                            <h3 class="text-xl font-semibold underline underline-offset-4">{{ event.title }}</h3>
+                        <nuxt-link :to="event.url" external target="_blank"
+                            :aria-label="`View event details for ${event.title}`">
+                            <h3 class="text-2xl font-semibold underline underline-offset-4">{{ event.title }}</h3>
                         </nuxt-link>
-                        <span v-if="event.date">{{ event.date.toDateString() }}</span>
+                        <span v-if="event.date">{{ event.date.start }}</span>
                         <span v-else>TBA</span>
                     </header>
                     <p class="text-lg mt-2 mb-2">
                         {{ event.description }}
                     </p>
-                    <div class="flex items-center flex-row gap-2 mt-2 mb-2">
-                        <span class="bg-blue-400/20 dark:bg-red-400/20 px-2 whitespace-nowrap" v-for="tag in event.tags" :key="tag">
-                            {{ tag.toUpperCase() }}
+                    <div class="flex items-center flex-row flex-wrap gap-2">
+                        <span class="bg-blue-400/20 dark:bg-red-400/20 px-2 whitespace-nowrap" v-for="tag in event.tags"
+                            :key="tag">
+                            {{ tag[0] }}
                         </span>
                     </div>
                 </article>
             </div>
+            <button>
+                <nuxt-link class="bg-white border-2 border-black p-2 block"
+                        to="https://acm-msud.notion.site/757f19532b4f4572a4d01d6c4a39d306?v=803892f5d5ec4937a41fc50040656256">
+                        <icons-notion class="scale-50"/>
+                        <span class="sr-only">View on Notion</span>
+                </nuxt-link>
+            </button>
         </section>
     </div>
 </template>

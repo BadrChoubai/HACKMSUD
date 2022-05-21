@@ -61,7 +61,7 @@ const questions: Question[] = [
                 <details class="p-4 shadow-sm border-2 border-black dark:bg-slate-700"
                     v-for="({ question, answer, source, resources }, i) in questions" :key="i" :id="`accordion-${i}`">
                     <summary class="flex items-center justify-between cursor-pointer">
-                        <h3 class="font-semibold tracking-wider underline underline-offset-4 text-2xl">{{
+                        <h3 class="font-semibold tracking-wider underline underline-offset-4 md:text-2xl text-[100%]">{{
                                 question
                         }}
                         </h3>

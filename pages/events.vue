@@ -3,11 +3,11 @@ const { data } = await useFetch('/api/events');
 </script>
 
 <template>
-    <div class="flex flex-col gap-8 w-full">
+    <div class="flex flex-col gap-y-8 w-full">
         <section>
             <article>
                 <h1 class="mb-2 border-b-4 border-b-blue-500 dark:border-b-red-500">Events</h1>
-                <p class="text-2xl">
+                <p class="text-2xl mt-3 mb-3">
                     The ACM Student Association plans to hold events for the Fall Semester, and also wants to start
                     attending tech events in the broader Denver Metro Tech community.
                     Below are all the events that we plan on hosting ourselves or attending as a group.
@@ -18,9 +18,9 @@ const { data } = await useFetch('/api/events');
             <header>
                 <h2 class="font-bold">Events Calendar</h2>
             </header>
-            <div class="mt-4 mb-4 flex flex-row flex-wrap justify-start gap-4">
+            <div class="mt-3 mb-3 flex flex-row flex-wrap justify-start gap-4">
                 <article
-                    class="flex flex-col justify-around w-[600px] items-start p-6 shadow-sm border-2 border-black dark:bg-slate-700"
+                    class="flex flex-col justify-around w-full lg:w-[600px] items-start p-6 shadow-sm border-2 border-black dark:bg-slate-700"
                     v-for="event in data.events">
                     <header class="block">
                         <nuxt-link :to="event.url" external target="_blank"

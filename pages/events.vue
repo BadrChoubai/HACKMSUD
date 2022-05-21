@@ -3,7 +3,7 @@ const { data } = await useFetch('/api/events');
 </script>
 
 <template>
-    <div class="flex flex-col gap-8 lg:w-5/6">
+    <div class="flex flex-col gap-8 w-full">
         <section>
             <article>
                 <h1 class="mb-2 border-b-4 border-b-blue-500 dark:border-b-red-500">Events</h1>
@@ -14,15 +14,18 @@ const { data } = await useFetch('/api/events');
                 </p>
             </article>
         </section>
-        <section>
+        <section class="w-full">
             <header>
                 <h2 class="font-bold">Events Calendar</h2>
             </header>
-            <div class="mt-4 mb-4 flex flex-row flex-wrap items-stretch gap-4">
-                <article class="flex flex-col justify-around items-stretch p-2 shadow-sm md:w-5/12 w-full rounded-md dark:bg-slate-700 bg-white/50" v-for="event in data.events">
+            <div class="mt-4 mb-4 flex flex-row flex-wrap justify-start gap-4">
+                <article
+                    class="flex flex-col justify-around w-[600px] items-start p-6 shadow-sm border-2 border-black dark:bg-slate-700"
+                    v-for="event in data.events">
                     <header class="block">
-                        <nuxt-link :to="event.url" external :aria-label="`View event website for ${event.title}`">
-                            <h3 class="text-xl font-semibold underline underline-offset-4">{{ event.title }}</h3>
+                        <nuxt-link :to="event.url" external target="_blank"
+                            :aria-label="`View event website for ${event.title}`">
+                            <h3 class="text-2xl font-semibold underline underline-offset-4">{{ event.title }}</h3>
                         </nuxt-link>
                         <span v-if="event.date">{{ event.date.start }}</span>
                         <span v-else>TBA</span>
@@ -31,15 +34,18 @@ const { data } = await useFetch('/api/events');
                         {{ event.description }}
                     </p>
                     <div class="flex items-center flex-row flex-wrap gap-2">
-                        <span class="bg-blue-400/20 dark:bg-red-400/20 px-2 whitespace-nowrap" v-for="tag in event.tags" :key="tag">
+                        <span class="bg-blue-400/20 dark:bg-red-400/20 px-2 whitespace-nowrap" v-for="tag in event.tags"
+                            :key="tag">
                             {{ tag[0] }}
                         </span>
                     </div>
                 </article>
             </div>
-            <button class="bg-white mt-4 rounded flex items-center p-2">
+            <button class="bg-white rounded flex items-center justify-center p-2 w-full">
                 <icons-notion class="block" />
-                <nuxt-link external target="_blank" to="https://acm-msud.notion.site/757f19532b4f4572a4d01d6c4a39d306?v=803892f5d5ec4937a41fc50040656256" class="text-[#37352f] font-display font-black p-2 block">
+                <nuxt-link external target="_blank"
+                    to="https://acm-msud.notion.site/757f19532b4f4572a4d01d6c4a39d306?v=803892f5d5ec4937a41fc50040656256"
+                    class="text-[#37352f] font-display font-black p-2 block">
                     View on Notion
                 </nuxt-link>
             </button>

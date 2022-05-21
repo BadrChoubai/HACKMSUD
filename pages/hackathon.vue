@@ -26,12 +26,12 @@
         <section>
             <article>
                 <h2 class="font-bold mb-2">How Can I Contribute?</h2>
-                <p class="mt-2 mb-4">If the list above provides some excitement for things to come, good! We are looking for help in managing all sorts of things: Technology, Finances, Logistics, and
+                <p class="mt-4 mb-4">If the list above provides some excitement for things to come, good! We are looking for help in managing all sorts of things: Technology, Finances, Logistics, and
                     Marketing. We will begin to open up a small set of volunteer roles to students interested in
                     applying very soon. Keep an eye out for an announcement in your student emails or on the CS Student Discord</p>
-                <button class="bg-blue-600/80 dark:bg-red-500/80 p-4 rounded">
+                <button class="bg-blue-600/80 dark:bg-red-500/80 p-4 rounded md:w-1/3 w-full">
                     <a class="text-white tracking-widest whitespace-nowrap font-display text-clip font-black drop-shadow-md"
-                        href="https://discord.gg/vfb3H5vx" aria-label="Link to join CS Student Discord">Join the CS Student Discord</a>
+                        href="https://discord.gg/vfb3H5vx" aria-label="Link to join CS Student Discord">JOIN THE DISCORD</a>
                 </button>
             </article>
         </section>

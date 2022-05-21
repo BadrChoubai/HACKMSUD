@@ -24,7 +24,7 @@ const { data } = await useFetch('/api/events');
                     v-for="event in data.events">
                     <header class="block">
                         <nuxt-link :to="event.url" external target="_blank"
-                            :aria-label="`View event website for ${event.title}`">
+                            :aria-label="`View event details for ${event.title}`">
                             <h3 class="text-2xl font-semibold underline underline-offset-4">{{ event.title }}</h3>
                         </nuxt-link>
                         <span v-if="event.date">{{ event.date.start }}</span>
@@ -41,12 +41,11 @@ const { data } = await useFetch('/api/events');
                     </div>
                 </article>
             </div>
-            <button class="bg-white rounded flex items-center justify-center p-2 w-full">
-                <icons-notion class="block" />
-                <nuxt-link external target="_blank"
-                    to="https://acm-msud.notion.site/757f19532b4f4572a4d01d6c4a39d306?v=803892f5d5ec4937a41fc50040656256"
-                    class="text-[#37352f] font-display font-black p-2 block">
-                    View on Notion
+            <button>
+                <nuxt-link class="bg-white border-2 border-black p-2 block"
+                        to="https://acm-msud.notion.site/757f19532b4f4572a4d01d6c4a39d306?v=803892f5d5ec4937a41fc50040656256">
+                        <icons-notion class="scale-50"/>
+                        <span class="sr-only">View on Notion</span>
                 </nuxt-link>
             </button>
         </section>

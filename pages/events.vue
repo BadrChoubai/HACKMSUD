@@ -3,7 +3,7 @@ const { data } = await useFetch('/api/events');
 </script>
 
 <template>
-    <div class="flex flex-col gap-y-8 w-full">
+    <div class="flex flex-col gap-y-8">
         <section>
             <article>
                 <h1 class="mb-2 border-b-4 border-b-blue-500 dark:border-b-red-500">Events</h1>

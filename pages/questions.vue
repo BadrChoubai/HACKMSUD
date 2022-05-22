@@ -1,4 +1,21 @@
 <script setup lang="ts">
+const route = useRoute()
+definePageMeta({
+  title: 'Questions'
+})
+
+useHead({
+    title: route.meta.title,
+    htmlAttrs: {
+        lang: "en-US"
+    },
+    meta: [
+        { name: 'og:title', content: `HACKMSUD - ${route.meta.title}` },
+        { name: 'description', content: "This page contains answers to frequently asked questions by students." },
+        { name: 'og:description', content: "This page contains answers to frequently asked questions by students." }
+    ],
+})
+
 interface Question {
     question: string;
     answer: string;

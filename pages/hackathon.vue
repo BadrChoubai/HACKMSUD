@@ -1,3 +1,22 @@
+<script setup>
+const route = useRoute()
+definePageMeta({
+  title: 'Planning a Hackathon'
+})
+
+useHead({
+    title: route.meta.title,
+    htmlAttrs: {
+        lang: "en-US"
+    },
+    meta: [
+        { name: 'og:title', content: `HACKMSUD - ${route.meta.title}` },
+        { name: 'description', content: "Learn about how and what the ACM Student Chapter is trying to accomplish in planning their University's first-ever hackathon" },
+        { name: 'og:description', content: "Learn about how and what the ACM Student Chapter is trying to accomplish in planning their University's first-ever hackathon" }
+    ],
+})
+</script>
+
 <template>
     <div class="flex flex-col gap-8">
         <section>

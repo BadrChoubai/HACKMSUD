@@ -14,15 +14,36 @@ const teams: Team[] = [
         description: "This team is responsible for the hacker experience at the hackathon. Every aspect of what the hackathon looks and feels like, this team is entirely responsible for that. Keep in mind, hacker experience is usually the thing that can make or break your hackathon. We might like to call this the think tank of your hackathon team."
     },
     {
+        title: "Technology",
+        description: "This team is in charge of the development lifecycle of our main website and the websites created for individual events. Members of this team can also serve as mentors with the opportunity to host workshops at the event and throughout the year."
+    },
+    {
         title: "Finance",
         description: "This team is responsible for securing sponsorships, making sure the vendors get paid according to the agreed timelines and managing the cash flow and budget."
     },
     {
         title: "Marketing",
-        description: "This team is in charge of promoting the event, deciding the marketing strategy, developing the website, handling social media etc."
+        description: "This team is in charge of promoting the event, deciding the marketing strategy, handling social media etc."
     }
 ]
 
+function shuffle(array) {
+    let currentIndex = array.length, randomIndex;
+
+    // While there remain elements to shuffle.
+    while (currentIndex != 0) {
+
+        // Pick a remaining element.
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        // And swap it with the current element.
+        [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
+    }
+
+    return array;
+}
 </script>
 
 <template>
@@ -33,13 +54,12 @@ const teams: Team[] = [
                 <p class="text-2xl mt-3 mb-3">
                     Everything involved from the planning of to the day-of a hackathon is something that no one can
                     accomplish alone. We will be looking for students interested in building the school's first-ever
-                    hackathon event, and who can keep the spark alive in helping build each subsequent one.
+                    hackathon event and who can keep the spark alive in helping build each subsequent one.
                 </p>
                 <p class="text-2xl mt-3 mb-3">
-                    We want to invite students from all majors to take part in putting on such an event, we need
+                    We want to invite students from all majors to take part in putting this event, we need
                     students to manage technology, financing, logistics, sponsorships and marketing, and much more.
                 </p>
-                <small>Don't worry we won't be using Teams</small>
             </article>
         </section>
         <section class="w-full">
@@ -48,12 +68,10 @@ const teams: Team[] = [
             </header>
             <div class="mt-3 mb-3 flex flex-row flex-wrap items-stretch justify-start gap-4">
                 <article
-                    class="flex flex-col justify-around w-full lg:w-[600px] items-start p-6 shadow-sm border-2 border-black dark:bg-slate-700"
-                    v-for="{ title, description } in teams">
-                    <header class="block">
-                        <h3 class="text-2xl font-semibold underline underline-offset-4">{{ title }}</h3>
-                    </header>
-                    <p class="text-lg">
+                    class="flex flex-col justify-start w-full lg:w-[600px] items-start p-6 shadow-sm border-2 border-black dark:bg-slate-700"
+                    v-for="{ title, description } in shuffle(teams)">
+                    <h3 class="text-2xl font-semibold underline underline-offset-4">{{ title }}</h3>
+                    <p class="text-lg mt-2 mb-2">
                         {{ description }}
                     </p>
                 </article>
@@ -61,7 +79,7 @@ const teams: Team[] = [
             <button class="bg-blue-600/80 dark:bg-red-500/80 mt-3 p-4 shadow-md md:w-1/3 w-full">
                 <nuxt-link external target="_blank" to="https://qxir78vuisl.typeform.com/to/a8DAfcrA"
                     class="text-white tracking-widest whitespace-nowrap font-display text-clip font-black drop-shadow-md w-full"
-                    aria-label="Volunteer Application">Apply Now</nuxt-link>
+                    aria-label="Volunteer Application">APPLY NOW</nuxt-link>
             </button>
         </section>
     </div>

@@ -1,4 +1,21 @@
 <script setup lang="ts">
+const route = useRoute()
+definePageMeta({
+  title: 'Questions'
+})
+
+useHead({
+    title: route.meta.title,
+    htmlAttrs: {
+        lang: "en-US"
+    },
+    meta: [
+        { name: 'og:title', content: `HACKMSUD - ${route.meta.title}` },
+        { name: 'description', content: "This page contains answers to frequently asked questions by students." },
+        { name: 'og:description', content: "This page contains answers to frequently asked questions by students." }
+    ],
+})
+
 interface Question {
     question: string;
     answer: string;
@@ -61,7 +78,7 @@ const questions: Question[] = [
                 <details class="p-4 shadow-sm border-2 border-black dark:bg-slate-700"
                     v-for="({ question, answer, source, resources }, i) in questions" :key="i" :id="`accordion-${i}`">
                     <summary class="flex items-center justify-between cursor-pointer">
-                        <h3 class="font-semibold tracking-wider underline underline-offset-4 text-2xl">{{
+                        <h3 class="font-semibold tracking-wider underline underline-offset-4 md:text-2xl text-[100%]">{{
                                 question
                         }}
                         </h3>

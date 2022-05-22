@@ -1,9 +1,26 @@
 <script setup lang="ts">
+const route = useRoute()
+definePageMeta({
+  title: 'Events'
+})
+
+useHead({
+    title: route.meta.title,
+    htmlAttrs: {
+        lang: "en-US"
+    },
+    meta: [
+        { name: 'og:title', content: `HACKMSUD - ${route.meta.title}` },
+        { name: 'description', content: "View the events calendar for the ACM Student Chapter. With events hosted either by us or by other organizations in the Denver Metro Area." },
+        { name: 'og:description', content: "View the events calendar for the ACM Student Chapter. With events hosted either by us or by other organizations in the Denver Metro Area." }
+    ],
+})
+
 const { data } = await useFetch('/api/events');
 </script>
 
 <template>
-    <div class="flex flex-col gap-y-8 w-full">
+    <div class="flex flex-col gap-y-8">
         <section>
             <article>
                 <h1 class="mb-2 border-b-4 border-b-blue-500 dark:border-b-red-500">Events</h1>
@@ -43,9 +60,9 @@ const { data } = await useFetch('/api/events');
             </div>
             <button>
                 <nuxt-link class="bg-white border-2 border-black p-2 block"
-                        to="https://acm-msud.notion.site/757f19532b4f4572a4d01d6c4a39d306?v=803892f5d5ec4937a41fc50040656256">
-                        <icons-notion class="scale-50"/>
-                        <span class="sr-only">View on Notion</span>
+                    to="https://acm-msud.notion.site/757f19532b4f4572a4d01d6c4a39d306?v=803892f5d5ec4937a41fc50040656256">
+                    <icons-notion class="scale-50" />
+                    <span class="sr-only">View on Notion</span>
                 </nuxt-link>
             </button>
         </section>
